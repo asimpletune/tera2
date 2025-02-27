@@ -1,0 +1,11 @@
+{
+  "name": "tera-node",
+  "version": "2.0.0",
+  "files": [
+    "tera_bg.wasm",
+    "tera.js",
+    "tera.d.ts"
+  ],
+  "main": "tera.js",
+  "types": "tera.d.ts"
+}

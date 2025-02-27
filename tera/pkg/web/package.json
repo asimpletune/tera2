@@ -1,0 +1,16 @@
+{
+  "name": "tera-web",
+  "type": "module",
+  "version": "2.0.0",
+  "files": [
+    "tera_bg.wasm",
+    "tera_bg.wasm.d.ts",
+    "tera.js",
+    "tera.d.ts"
+  ],
+  "main": "tera.js",
+  "types": "tera.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
