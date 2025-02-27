@@ -31,3 +31,16 @@ pub(crate) use std::collections::{HashMap, HashSet};
 
 #[cfg(test)]
 mod snapshot_tests;
+
+use wasm_bindgen::prelude::*;
+
+#[wasm_bindgen]
+pub fn render(template: String, data: JsValue) -> String {
+  let obj: HashMap<String, serde_json::Value> = serde_wasm_bindgen::from_value(data).expect("Expected a JSON object");
+  let mut ctx = Context::new();
+  for (key, value) in obj {
+    ctx.insert(key, &value);
+  };
+  let mut tera = Tera::default();
+  return tera.render_str(&template, &ctx).unwrap()
+}
