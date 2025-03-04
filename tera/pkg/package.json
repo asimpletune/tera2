@@ -1,0 +1,28 @@
+{
+  "name": "tera",
+  "version": "2.0.0",
+  "files": [
+    "tera-bundler_bg.js",
+    "tera-bundler_bg.wasm",
+    "tera-bundler_bg.wasm.d.ts",
+    "tera-bundler.d.ts",
+    "tera-bundler.js",
+    "tera-node_bg.wasm",
+    "tera-node_bg.wasm.d.ts",
+    "tera-node.d.ts",
+    "tera-node.js"
+
+  ],
+  "exports": {
+    "node": {
+      "import": "./tera-node.js",
+      "types": "./tera-node.d.ts",
+      "require": "./tera-node.js"
+    },
+    "default": {
+      "import": "./tera-bundler.js",
+      "types": "./tera-bundler.d.ts",
+      "require": "./tera-bundler.js"
+    }
+  }
+}
