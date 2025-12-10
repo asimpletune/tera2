@@ -4,6 +4,8 @@ Simple spread: {{ {...base} | safe }}
 Add key: {{ {...base, "d": 4} | safe }}
 Multiple spreads: {{ {...base, ...other} | safe }}
 Override: {{ {...base, "a": 99} | safe }}
+{% set base2 = {"a": 3, "b": 4} %}
+Override 2: {{ {...base,...base2} | safe }}
 Interleaved: {{ {"x": 0, ...base, "y": 9} | safe }}
 {% set empty = {} %}
 Empty spread: {{ {...empty} | safe }}
